@@ -4,7 +4,19 @@
   box-sizing: border-box;
 }
 
-body {
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 20px;
+  color: #cce8cc;
+}
+
+h2 {
+  text-transform: capitalize;
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+}
+
+.app-container {
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -12,16 +24,20 @@ body {
   background-color: #395c6b;
 }
 
-h1 {
-  font-family: 'Open Sans', sans-serif;
-  margin-bottom: 20px;
-  color: #cce8cc;
-}
-
-.app-container {
+.app-canvas {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.app-settings-container {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  border: 1px solid white;
+  padding: 20px;
 }
 
 #gameOfLife {

@@ -5,12 +5,24 @@
   <meta charset='utf-8'/>
   <link href
   ="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap"
-   rel="stylesheet"> 
+   rel="stylesheet">
 </head>
 <body>
   <div class='app-container'>
+    <div class='app-canvas'>
     <h1>Conway's Game of Life</h1>
     <canvas id='gameOfLife' width='600' height='600'></canvas>
+    </div>
+    <div class='app-settings-container'>
+      <h2>settings</h2>
+      <p>Grid size: 22</p>
+      <input type='range' min='5' max='50' value='22' class='gridSize'>
+      <p>Game speed: 125</p>
+      <input type='range' min='1' max='2000' value='125' class='gameSpeed'>
+      <p>Living cell<br/> probability: 30</p>
+      <input type='range' min='10' max='60' value='30' class='livingCellProb'>
+      <button type='button' id='bt-apply'>apply</button>
+    </div>
   </div>
   <script src='main.js'></script>
 </body>
