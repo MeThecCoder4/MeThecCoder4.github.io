@@ -209,12 +209,20 @@ const sliders = document.querySelectorAll('input');
 const sliderTitles = document.querySelectorAll('p');
 const applyButton = document.getElementById('bt-apply');
 
+sliderTitles[0].innerHTML += ' ' + sliders[0].value + '&sup2; cells';
+sliderTitles[1].innerHTML += ' ' + sliders[1].value + ' ms';
+sliderTitles[2].innerHTML += ' ' + sliders[2].value + ' %';
+
 for(let i = 0; i < sliders.length; i++) {
   sliders[i].oninput = function() {
     for(let i = 0; i < sliders.length; i++) {
-      const titleText = sliderTitles[i].textContent.split(':')[0];
+      const titleText = sliderTitles[i].innerHTML.split(':')[0];
       sliderTitles[i].textContent = titleText + ': ' + sliders[i].value;
     }
+
+    sliderTitles[0].innerHTML += '&sup2; cells'
+    sliderTitles[1].innerHTML += ' ms';
+    sliderTitles[2].innerHTML += ' %';
   }
 }
 
